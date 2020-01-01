@@ -1,0 +1,7 @@
+pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
+
+python generate_tfrecord.py --csv_input=train_labels.csv  --output_path=train.record --image_dir=C:/Users/MSI-PC/Source/Repos/models/images
+
+python generate_tfrecord.py --csv_input=test_labels.csv  --output_path=test.record --image_dir=C:/Users/MSI-PC/Source/Repos/models/images
+
+python research/object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path ssd_mobilenet_v2_coco.config --trained_checkpoint_prefix  train/model.ckpt-124 --output_directory fine_tuned_model
