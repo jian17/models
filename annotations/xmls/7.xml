@@ -6,8 +6,8 @@
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>425</width>
-		<height>425</height>
+		<width>1280</width>
+		<height>960</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
@@ -17,58 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>75</xmin>
-			<ymin>218</ymin>
-			<xmax>162</xmax>
-			<ymax>300</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>hand</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>110</xmin>
-			<ymin>143</ymin>
-			<xmax>173</xmax>
-			<ymax>218</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>hand</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>160</xmin>
-			<ymin>95</ymin>
-			<xmax>222</xmax>
-			<ymax>187</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>hand</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>227</xmin>
-			<ymin>113</ymin>
-			<xmax>283</xmax>
-			<ymax>209</ymax>
-		</bndbox>
-	</object>
-	<object>
-		<name>hand</name>
-		<pose>Unspecified</pose>
-		<truncated>0</truncated>
-		<difficult>0</difficult>
-		<bndbox>
-			<xmin>283</xmin>
-			<ymin>157</ymin>
-			<xmax>334</xmax>
-			<ymax>247</ymax>
+			<xmin>636</xmin>
+			<ymin>229</ymin>
+			<xmax>845</xmax>
+			<ymax>474</ymax>
 		</bndbox>
 	</object>
 </annotation>

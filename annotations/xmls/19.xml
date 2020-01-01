@@ -1,7 +1,7 @@
 <annotation>
 	<folder>images</folder>
-	<filename>3.jpg</filename>
-	<path>C:\Users\MSI-PC\Source\Repos\models\images\3.jpg</path>
+	<filename>19.jpg</filename>
+	<path>C:\Users\MSI-PC\Source\Repos\models\images\19.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>630</xmin>
-			<ymin>240</ymin>
-			<xmax>878</xmax>
-			<ymax>490</ymax>
+			<xmin>610</xmin>
+			<ymin>446</ymin>
+			<xmax>800</xmax>
+			<ymax>661</ymax>
 		</bndbox>
 	</object>
 </annotation>
