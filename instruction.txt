@@ -1,9 +1,15 @@
 pip install "git+https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"
 
-python generate_tfrecord.py --csv_input=train_labels.csv  --output_path=train.record --image_dir=C:/Users/MSI-PC/Source/Repos/models/images
+extract_dataset.py --image_path=C:\Users\MSI-PC\Source\Repos\hand_gesture_dataset\kinect_leap_dataset
 
-python generate_tfrecord.py --csv_input=test_labels.csv  --output_path=test.record --image_dir=C:/Users/MSI-PC/Source/Repos/models/images
+extract_dataset.py --image_path=C:\Users\MSI-PC\Source\Repos\hand_gesture_dataset\kinect_leap_dataset
 
-python research/object_detection/model_main.py --logtostderr --train_dir=train --pipeline_config_path=ssd_mobilenet_v2_coco.config
+python generate_tf_record.py --csv_input=annotations\train_labels.csv  --output_path=training\train.record --image_dir=images
 
-python research/object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path ssd_mobilenet_v2_coco.config --trained_checkpoint_prefix  train/model.ckpt-124 --output_directory fine_tuned_model
+python generate_tf_record.py --csv_input=annotations\test_labels.csv  --output_path=training\test.record --image_dir=images
+
+python research/object_detection/model_main.py --logtostderr --model_dir=train --pipeline_config_path=ssd_mobilenet_v2_coco.config --num_train_steps=100 --eval_training_data=True --checkpoint_dir=train
+
+python research/object_detection/model_main.py --logtostderr --model_dir=workspace\hand_gestures\training --pipeline_config_path=workspace\hand_gestures\ssd_mobilenet_v2_coco.config --num_train_steps=100
+
+python research/object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path workspace\hand_gestures\ssd_mobilenet_v2_coco.config --trained_checkpoint_prefix workspace\hand_gestures\training\model.ckpt-930 --output_directory workspace\hand_gestures\fine_tuned_model
